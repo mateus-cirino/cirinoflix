@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
 import '../Menu/Menu.css'
-import Botao from '../Botao';
+import Button from '../Button';
 
 function Menu() {
     return (
@@ -13,12 +13,12 @@ function Menu() {
                     alt="Logo do site CirinoFlix" 
                 />
             </a>
-            <Botao 
+            <Button 
                 as='a'
                 className="ButtonLink" 
                 href='/'>
                 Novo Vídeo
-            </Botao>
+            </Button>
         </nav>
     );
 }
