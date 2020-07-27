@@ -10,7 +10,7 @@ function Menu() {
                 <img 
                     className="Logo"
                     src={Logo} 
-                    alt="Logo do site CirinoFlix" 
+                    alt="Logo do CirinoFlix" 
                 />
             </a>
             <Button 
