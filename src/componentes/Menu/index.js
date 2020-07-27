@@ -13,11 +13,12 @@ function Menu() {
                     alt="Logo do site CirinoFlix" 
                 />
             </a>
-            <Botao
-                nomeDaClasse="ButtonLink"
-                enderecoDoLink="/"
-                nomeDoLink="Novo Vídeo"
-            />
+            <Botao 
+                as='a'
+                className="ButtonLink" 
+                href='/'>
+                Novo Vídeo
+            </Botao>
         </nav>
     );
 }
