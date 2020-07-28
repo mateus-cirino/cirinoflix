@@ -4,7 +4,7 @@ import styled from 'styled-components';
     por exemplo no caso de uma tag <a> ele já pressupoe a existencia
     de props como className e href.
 */
-const Botao = styled.button`
+const Button = styled.button`
     color: var(--white);
     border: 1px solid var(--white);
     box-sizing: border-box;
@@ -34,4 +34,4 @@ const Botao = styled.button`
     }
 `;
 
-export default Botao; 
+export default Button; 
