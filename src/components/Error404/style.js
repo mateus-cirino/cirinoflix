@@ -8,10 +8,18 @@ export const ContainerError = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: -94px; /* 
+    margin-top: -94px;  
+                        /* 
                         somente para corrigir os 94px adicionados na variavel
-                        bodyPaddingTop no src/components/Menu/Menu.css
+                        bodyPaddingTop (Desktop) no src/components/Menu/Menu.css
                         */
+    @media (max-width: 800px) {
+        margin-top: -40px; 
+                        /* 
+                        somente para corrigir os 40px adicionados na variavel
+                        bodyPaddingTop (Mobile) no src/components/Menu/Menu.css
+                        */
+    }
 `;
 
 ContainerError.Title = styled.h1`
