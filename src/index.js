@@ -8,12 +8,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Categoria from './pages/Cadastro/Categoria';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route path='/' component={Home} exact/>
+        <Route path='/cadastro/categoria' component={Categoria} exact/>
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
