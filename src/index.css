@@ -22,4 +22,8 @@ body {
 
 a {
   color: inherit;
-} 
+}
+
+#root {
+  background-color: #141414;
+}
