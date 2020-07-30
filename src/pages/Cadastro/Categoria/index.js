@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import Menu from '../../../components/Menu';
-import Footer from '../../../components/Footer';
+import PageDefault from '../../../templates/PageDefault';
 import Form from '../../../components/Form/style.js';
 import FormField from '../../../components/Form/components/FormField';
 import {ButtonForm} from '../../../components/Button/style.js';
@@ -41,45 +40,43 @@ function Categoria() {
     }
 
     return (
-        <>
-        <Menu />
-        <Form onSubmit={handleSubmit}>
+        <PageDefault>
+            <Form onSubmit={handleSubmit}>
 
-            <FormField 
-                label='Nome da categoria'
-                type='text'
-                name='nome' 
-                onChange={handleChange}/>
+                <FormField 
+                    label='Nome da categoria'
+                    type='text'
+                    name='nome' 
+                    onChange={handleChange}/>
 
-            <FormField 
-                label='Descrição da categoria'
-                type='textarea'
-                name='descricao' 
-                onChange={handleChange}/>
-            
-            <FormField 
-                label='Cor da categoria'
-                type='color'
-                name='cor' 
-                onChange={handleChange}/>
+                <FormField 
+                    label='Descrição da categoria'
+                    type='textarea'
+                    name='descricao' 
+                    onChange={handleChange}/>
+                
+                <FormField 
+                    label='Cor da categoria'
+                    type='color'
+                    name='cor' 
+                    onChange={handleChange}/>
 
-            <div>
-                <ButtonForm type='submit'>
-                    Adicionar
-                </ButtonForm>
-            </div>
+                <div style={{margin: "10px"}}>
+                    <ButtonForm type='submit'>
+                        Adicionar
+                    </ButtonForm>
+                </div>
 
-            <div>
-                <ul>
-                    {categorias.map((categoria, index) => {
-                        return (<li key={`${categoria.nome}${index}`}>{categoria.nome}</li>);
-                    })}
-                </ul>
-            </div>
-        </Form>
+                <div>
+                    <ul>
+                        {categorias.map((categoria, index) => {
+                            return (<li key={`${categoria.nome}${index}`}>{categoria.nome}</li>);
+                        })}
+                    </ul>
+                </div>
+            </Form>
         
-        <Footer />
-        </>
+        </PageDefault>
     );
 }
 
