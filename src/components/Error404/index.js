@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContainerError } from './style.js';
-import Button from '../Button';
+import { ButtonLink } from '../Button/style.js';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 
@@ -18,7 +18,7 @@ function Error404 () {
                 Página não encontrada
             </ContainerError.Title>
             <Link to="/" 
-                component={Button}
+                component={ButtonLink}
                 as='a'>
                     Home
             </Link>

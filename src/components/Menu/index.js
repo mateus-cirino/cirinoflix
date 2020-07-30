@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
 import '../Menu/Menu.css'
-import Button from '../Button';
+import { ButtonLink } from '../Button/style.js';
 
 function Menu() {
     return (
@@ -13,13 +13,13 @@ function Menu() {
                     alt="Logo do CirinoFlix" 
                 />
             </a>
-            <Button 
+            <ButtonLink 
                 as='a'
-                className="ButtonLink" 
+                className="Button" 
                 href='/'
                 newVideo>
                 Novo Vídeo
-            </Button>
+            </ButtonLink>
         </nav>
     );
 }
