@@ -1,5 +1,5 @@
 import React from 'react';
-import { LabelForm, DivForm, InputForm, InputTextAreaForm } from './style.js';
+import { LabelForm, DivForm, InputForm, InputTextAreaForm } from './styles.js';
 
 function FormField({
     label,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ContainerError } from './style.js';
-import { ButtonLink } from '../Button/style.js';
+import { ContainerError } from './styles.js';
+import { ButtonLink } from '../Button/styles.js';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 

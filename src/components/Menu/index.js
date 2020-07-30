@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
 import '../Menu/Menu.css'
-import { ButtonLink } from '../Button/style.js';
+import { ButtonLink } from '../Button/styles.js';
 
 function Menu() {
     return (

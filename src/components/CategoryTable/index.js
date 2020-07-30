@@ -1,5 +1,5 @@
 import React from 'react';
-import {TableContainer} from './style.js'
+import {TableContainer} from './styles.js'
 
 function CategoryTable({categorias}) {
     return(

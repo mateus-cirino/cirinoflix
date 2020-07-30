@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import PageDefault from '../../../templates/PageDefault';
-import Form from '../../../components/Form/style.js';
+import Form from '../../../components/Form/styles.js';
 import FormField from '../../../components/Form/components/FormField';
-import {ButtonForm} from '../../../components/Button/style.js';
+import {ButtonForm} from '../../../components/Button/styles.js';
 import CategoryTable from '../../../components/CategoryTable';
 
 function Categoria() {
