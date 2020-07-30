@@ -6,7 +6,9 @@ function PageDefault({children}) {
     return (
         <>
         <Menu />
-        {children}
+            <main>
+                {children}
+            </main>
         <Footer />
         </>
     );

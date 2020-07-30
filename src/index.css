@@ -18,12 +18,19 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #141414;
 }
 
 a {
   color: inherit;
 }
 
+main {
+  flex: 1;
+}
+
 #root {
-  background-color: #141414;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
