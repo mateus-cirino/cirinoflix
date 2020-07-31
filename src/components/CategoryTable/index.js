@@ -4,28 +4,28 @@ import {TableContainer} from './styles.js'
 function CategoryTable({categorias}) {
     return(
         <TableContainer>
-        <table>
-            <thead>
+        <TableContainer.Table>
+            <TableContainer.Thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Cor</th>
+                    <TableContainer.TdNome>Nome</TableContainer.TdNome>
+                    <TableContainer.TdDescricao>Descrição</TableContainer.TdDescricao>
+                    <TableContainer.TdCor>Cor</TableContainer.TdCor>
                 </tr>
-            </thead>
-            <tbody>
+            </TableContainer.Thead>
+            <TableContainer.Tbody>
                 {
                     categorias.map((categoria, index) => {
                         return (
                             <tr key={`${categoria}${index}`}>
-                                <td>{categoria.nome}</td>
-                                <td>{categoria.descricao}</td>
-                                <td>{categoria.cor}</td>
+                                <TableContainer.TdNome>{categoria.nome}</TableContainer.TdNome>
+                                <TableContainer.TdDescricao>{categoria.descricao}</TableContainer.TdDescricao>
+                                <TableContainer.TdCor>{categoria.cor}</TableContainer.TdCor>
                             </tr>
                         );
                     })
                 }
-            </tbody>
-        </table>
+            </TableContainer.Tbody>
+        </TableContainer.Table>
         </TableContainer>
     );
 }
