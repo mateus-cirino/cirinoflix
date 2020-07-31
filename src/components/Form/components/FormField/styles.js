@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DivForm = styled.div`
     background: #53585d;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
     padding: 5px;
     border-radius: 5px;
     display: flex;
@@ -22,6 +22,9 @@ export const InputForm = styled.input`
     border:none;
     margin: 2px;
     width: 100%;
+    &:focus{
+        color: white
+    }
 `;
 
 export const InputTextAreaForm = styled.textarea`
@@ -30,4 +33,7 @@ export const InputTextAreaForm = styled.textarea`
     border:none;
     margin: 2px;
     width: 100%;
+    &:focus{
+        color: white
+    }
 `;
