@@ -16,7 +16,7 @@ function CategoryTable({ categorias }) {
         <TableContainer.Tbody>
           {
                     categorias.map((categoria) => (
-                      <tr key={`${categoria}`}>
+                      <tr key={`${categoria.id}`}>
                         <TableContainer.TdNome>
                           {categoria.nome}
                         </TableContainer.TdNome>
