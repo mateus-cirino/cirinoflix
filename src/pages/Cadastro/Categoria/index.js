@@ -42,7 +42,15 @@ function Categoria() {
 
     return (
         <PageDefault>
+            <div style={{padding: "15px",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "15px"
+                    }}>
             <Form onSubmit={handleSubmit}>
+            <h1 style={{
+                color: "white"
+                }}>Cadastro de Categoria</h1>
                 <FormField 
                     label='Nome da categoria'
                     type='text'
@@ -58,11 +66,20 @@ function Categoria() {
                     type='color'
                     name='cor' 
                     onChange={handleChange}/>
-                <ButtonForm type='submit' style={{marginLeft: "10px"}}>
+                <ButtonForm type='submit'>
                     Adicionar
                 </ButtonForm>
-                <CategoryTable categorias={categorias}/>
             </Form>
+            <div style={{display: "flex",
+                        flexDirection: "column",
+                        gap: "15px"
+                    }}>
+                    <h2 style={{
+                        color: "white"
+                    }}>Categorias já cadastradas</h2>
+                <CategoryTable categorias={categorias}/>
+            </div>
+            </div>
         </PageDefault>
     );
 }
