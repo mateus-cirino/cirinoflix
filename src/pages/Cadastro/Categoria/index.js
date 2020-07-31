@@ -24,12 +24,22 @@ function Categoria() {
         });
     };
 
+    function validacao() {
+        return values.nome !== ''
+               &&
+               values.descricao !== ''
+               &&
+               values.cor !== '';
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
-        setCategorias([
-            ...categorias,
-            values
-        ]);
+        if(validacao()) {
+            setCategorias([
+                ...categorias,
+                values
+            ]);
+        }
     }
 
     function handleChange(e) {
