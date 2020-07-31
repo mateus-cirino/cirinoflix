@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageDefault from '../../../templates/PageDefault';
 import Form from '../../../components/Form/styles';
 import FormField from '../../../components/Form/components/FormField';
@@ -16,6 +16,18 @@ function Categoria() {
 
   // já esse state é responsável pelos valores do objeto categoria {nome: descricao: cor}
   const [values, setValues] = useState(valoresIniciais);
+
+  const URL = 'http://localhost:3001/categorias';
+
+  useEffect(() => {
+    fetch(URL)
+      .then(async (respostaDoServidor) => {
+        const reposta = await respostaDoServidor.json();
+        setCategorias(reposta);
+      }).catch((e) => {
+        throw e;
+      });
+  }, []);
 
   function setValue(key, value) {
     setValues({
