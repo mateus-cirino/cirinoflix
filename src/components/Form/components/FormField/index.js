@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  LabelForm, DivForm, InputForm, InputTextAreaForm,
+  LabelForm, DivForm, InputForm,
 } from './styles';
 
 function FormField({
@@ -15,9 +15,7 @@ function FormField({
       <LabelForm>
         {`${label}: `}
       </LabelForm>
-      {(type !== 'textarea')
-        ? <InputForm type={type} name={name} onChange={onChange} />
-        : <InputTextAreaForm name={name} onChange={onChange} />}
+      <InputForm as={type} type={type} name={name} onChange={onChange} />
     </DivForm>
   );
 }

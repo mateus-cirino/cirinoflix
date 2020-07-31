@@ -26,14 +26,3 @@ export const InputForm = styled.input`
         color: white
     }
 `;
-
-export const InputTextAreaForm = styled.textarea`
-    background-color: inherit;
-    color: inherit;
-    border:none;
-    margin: 2px;
-    width: 100%;
-    &:focus{
-        color: white
-    }
-`;
