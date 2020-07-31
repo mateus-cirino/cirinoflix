@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerError = styled.div`
+const ContainerError = styled.div`
     height: 100vh;
     background-color: #141414;
     padding: 10px;
@@ -26,3 +26,5 @@ ContainerError.Title = styled.h1`
     color: white;
     font-size: 1.3em;
 `;
+
+export default ContainerError;

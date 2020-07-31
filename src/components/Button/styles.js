@@ -22,7 +22,7 @@ export const ButtonLink = styled.button`
     &:focus {
         opacity: .5;
     }
-    ${props => props.newVideo && `
+    ${(props) => props.newVideo && `
         @media (max-width: 800px) {
             position: fixed;
             left: 0;

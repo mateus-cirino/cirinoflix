@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TableContainer = styled.div`
+const TableContainer = styled.div`
     color: white;
 `;
 
@@ -37,3 +37,5 @@ TableContainer.TdCor = styled.td`
     border: 1px solid #a9899e;
     padding: 5px;
 `;
+
+export default TableContainer;
