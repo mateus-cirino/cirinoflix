@@ -10,12 +10,14 @@ function FormField({
   name,
   onChange,
 }) {
+  const isTextArea = type === 'textarea';
+  const as = isTextArea ? 'textarea' : 'input';
   return (
     <DivForm>
       <LabelForm>
         {`${label}: `}
       </LabelForm>
-      <InputForm as={type} type={type} name={name} onChange={onChange} />
+      <InputForm as={as} type={type} name={name} onChange={onChange} />
     </DivForm>
   );
 }
