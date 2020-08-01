@@ -17,7 +17,9 @@ function Categoria() {
   // já esse state é responsável pelos valores do objeto categoria {nome: descricao: cor}
   const [values, setValues] = useState(valoresIniciais);
 
-  const URL = 'https://cirinoflix.herokuapp.com/categorias';
+  const isLocalHost = window.location.hostname.includes('localhost');
+
+  const URL = isLocalHost ? 'http://localhost:8080/categorias' : 'https://cirinoflix.herokuapp.com/categorias';
 
   useEffect(() => {
     fetch(URL)
