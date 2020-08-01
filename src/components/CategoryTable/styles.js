@@ -27,13 +27,25 @@ TableContainer.TdTitulo = styled.td`
 `;
 
 TableContainer.TdDescricao = styled.td`
-    width: 60%;
+    width: 50%;
     border: 1px solid #a9899e;
     padding: 5px;
 `;
 
 TableContainer.TdCor = styled.td`
-    width: 20%;
+    width: 10%;
+    border: 1px solid #a9899e;
+    padding: 5px;
+`;
+
+TableContainer.TdEditar = styled.td`
+    width: 10%;
+    border: 1px solid #a9899e;
+    padding: 5px;
+`;
+
+TableContainer.TdDeletar = styled.td`
+    width: 10%;
     border: 1px solid #a9899e;
     padding: 5px;
 `;

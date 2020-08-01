@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TableContainer from './styles';
+import Edit from '../../assets/edit.png';
+import Delete from '../../assets/delete.png';
 
 function CategoryTable({ categorias }) {
   return (
@@ -11,6 +13,8 @@ function CategoryTable({ categorias }) {
             <TableContainer.TdTitulo>Título</TableContainer.TdTitulo>
             <TableContainer.TdDescricao>Descrição</TableContainer.TdDescricao>
             <TableContainer.TdCor>Cor</TableContainer.TdCor>
+            <TableContainer.TdEditar>Editar</TableContainer.TdEditar>
+            <TableContainer.TdDeletar>Deletar</TableContainer.TdDeletar>
           </tr>
         </TableContainer.Thead>
         <TableContainer.Tbody>
@@ -26,6 +30,12 @@ function CategoryTable({ categorias }) {
                         <TableContainer.TdCor>
                           {categoria.cor}
                         </TableContainer.TdCor>
+                        <TableContainer.TdEditar>
+                          <img src={Edit} alt="Icone para edição" />
+                        </TableContainer.TdEditar>
+                        <TableContainer.TdDeletar>
+                          <img src={Delete} alt="Icone para exclusão" />
+                        </TableContainer.TdDeletar>
                       </tr>
                     ))
                 }
@@ -35,8 +45,15 @@ function CategoryTable({ categorias }) {
   );
 }
 
+CategoryTable.defaultProps = {
+  categoriaParaEdicao: 0,
+  categoriaParaExclusao: 0,
+};
+
 CategoryTable.propTypes = {
   categorias: PropTypes.arrayOf(Object).isRequired,
+  categoriaParaEdicao: PropTypes.number,
+  categoriaParaExclusao: PropTypes.number,
 };
 
 export default CategoryTable;
