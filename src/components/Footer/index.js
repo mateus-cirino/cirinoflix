@@ -6,9 +6,9 @@ import Logo from '../../assets/logo.png';
 function Footer() {
   return (
     <FooterBase>
-      <a href="/">
+      <Link to="/">
         <img className="Logo" src={Logo} alt="Logo do CirinoFlix" />
-      </a>
+      </Link>
       <p>
         Orgulhosamente criado durante a
         {' '}
