@@ -29,7 +29,7 @@ function Categoria() {
       }).catch((e) => {
         throw e;
       });
-  }, []);
+  });
 
   function setValue(key, value) {
     setValues({
