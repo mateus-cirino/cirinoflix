@@ -76,7 +76,7 @@ function Categoria() {
             color: 'white',
           }}
           >
-            Cadastro de Categoria
+            Cadastro de categoria
           </h1>
           <FormField
             label="Titulo da categoria"
