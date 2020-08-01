@@ -20,7 +20,7 @@ TableContainer.Tbody = styled.tbody`
     width: 100%;
 `;
 
-TableContainer.TdNome = styled.td`
+TableContainer.TdTitulo = styled.td`
     width: 20%;
     border: 1px solid #a9899e;
     padding: 5px;

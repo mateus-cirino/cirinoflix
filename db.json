@@ -1,13 +1,13 @@
 {
     "categorias": [{
         "id": 1,
-        "nome": "Front End",
+        "titulo": "Front End",
         "descricao": "Uma categoria legal",
         "cor": "#2b2b2"
     },
     {
         "id": 2,
-        "nome": "Back End",
+        "titulo": "Back End",
         "descricao": "Outra categoria legal",
         "cor": "#ccccc"
     }]

@@ -8,7 +8,7 @@ function CategoryTable({ categorias }) {
       <TableContainer.Table>
         <TableContainer.Thead>
           <tr>
-            <TableContainer.TdNome>Nome</TableContainer.TdNome>
+            <TableContainer.TdTitulo>Título</TableContainer.TdTitulo>
             <TableContainer.TdDescricao>Descrição</TableContainer.TdDescricao>
             <TableContainer.TdCor>Cor</TableContainer.TdCor>
           </tr>
@@ -17,9 +17,9 @@ function CategoryTable({ categorias }) {
           {
                     categorias.map((categoria) => (
                       <tr key={`${categoria.id}`}>
-                        <TableContainer.TdNome>
-                          {categoria.nome}
-                        </TableContainer.TdNome>
+                        <TableContainer.TdTitulo>
+                          {categoria.titulo}
+                        </TableContainer.TdTitulo>
                         <TableContainer.TdDescricao>
                           {categoria.descricao}
                         </TableContainer.TdDescricao>

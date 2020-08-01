@@ -7,14 +7,14 @@ import CategoryTable from '../../../components/CategoryTable';
 
 function Categoria() {
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '#0000',
   };
     // este state é responsável pela manipulacao das categorias [categorias]
   const [categorias, setCategorias] = useState([]);
 
-  // já esse state é responsável pelos valores do objeto categoria {nome: descricao: cor}
+  // já esse state é responsável pelos valores do objeto categoria {titulo: descricao: cor}
   const [values, setValues] = useState(valoresIniciais);
 
   const isLocalHost = window.location.hostname.includes('localhost');
@@ -29,7 +29,7 @@ function Categoria() {
       }).catch((e) => {
         throw e;
       });
-  });
+  },[]);
 
   function setValue(key, value) {
     setValues({
@@ -39,7 +39,7 @@ function Categoria() {
   }
 
   function validacao() {
-    return values.nome !== ''
+    return values.titulo !== ''
                && values.descricao !== ''
                && values.cor !== '';
   }
@@ -79,9 +79,9 @@ function Categoria() {
             Cadastro de Categoria
           </h1>
           <FormField
-            label="Nome da categoria"
+            label="Titulo da categoria"
             type="text"
-            name="nome"
+            name="titulo"
             onChange={handleChange}
           />
           <FormField
