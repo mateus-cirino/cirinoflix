@@ -45,15 +45,8 @@ function CategoryTable({ categorias }) {
   );
 }
 
-CategoryTable.defaultProps = {
-  categoriaParaEdicao: 0,
-  categoriaParaExclusao: 0,
-};
-
 CategoryTable.propTypes = {
   categorias: PropTypes.arrayOf(Object).isRequired,
-  categoriaParaEdicao: PropTypes.number,
-  categoriaParaExclusao: PropTypes.number,
 };
 
 export default CategoryTable;
