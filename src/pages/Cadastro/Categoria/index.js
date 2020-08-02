@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import _ from 'lodash';
 import PageDefault from '../../../templates/PageDefault';
 import Form from '../../../components/Form/styles';
 import FormField from '../../../components/Form/components/FormField';
@@ -7,9 +8,10 @@ import CategoryTable from '../../../components/CategoryTable';
 
 function Categoria() {
   const valoresIniciais = {
+    id: '',
     titulo: '',
     descricao: '',
-    cor: '#0000',
+    cor: '',
   };
     // este state é responsável pela manipulacao das categorias [categorias]
   const [categorias, setCategorias] = useState([]);
@@ -59,6 +61,16 @@ function Categoria() {
     setValue(
       name,
       value,
+    );
+  }
+
+  function editarCategoria(categoria) {
+    console.log(categoria); //falta fazer essa parte
+  }
+
+  function excluirCategoria(categoriaASerExcluida) {
+    setCategorias(
+      _.remove(categorias, (categoria) => categoria !== categoriaASerExcluida),
     );
   }
 
@@ -112,7 +124,7 @@ function Categoria() {
           >
             Categorias já cadastradas
           </h2>
-          <CategoryTable categorias={categorias} />
+          <CategoryTable categorias={categorias} edicao={editarCategoria} exclusao={excluirCategoria} />
         </div>
       </div>
     </PageDefault>
