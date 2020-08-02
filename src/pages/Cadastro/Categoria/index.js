@@ -46,9 +46,14 @@ function Categoria() {
                && values.cor !== '';
   }
 
+  function pegarUltimoId() {
+    return (categorias.length > 0) ? categorias[categorias.length - 1].id + 1 : 1;
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (validacao()) {
+      values.id = pegarUltimoId();
       setCategorias([
         ...categorias,
         values,
