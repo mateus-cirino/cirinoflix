@@ -8,6 +8,7 @@ function FormField({
   label,
   type,
   name,
+  value,
   onChange,
 }) {
   const isTextArea = type === 'textarea';
@@ -17,7 +18,7 @@ function FormField({
       <LabelForm>
         {`${label}: `}
       </LabelForm>
-      <InputForm as={as} type={type} name={name} onChange={onChange} />
+      <InputForm as={as} type={type} name={name} value={value} onChange={onChange} />
     </DivForm>
   );
 }
@@ -26,6 +27,7 @@ FormField.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

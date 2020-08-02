@@ -11,7 +11,7 @@ function Categoria() {
     id: '',
     titulo: '',
     descricao: '',
-    cor: '',
+    cor: '#0000',
   };
     // este state é responsável pela manipulacao das categorias [categorias]
   const [categorias, setCategorias] = useState([]);
@@ -65,7 +65,9 @@ function Categoria() {
   }
 
   function editarCategoria(categoria) {
-    console.log(categoria); //falta fazer essa parte
+    setValues(
+      categoria,
+    );
   }
 
   function excluirCategoria(categoriaASerExcluida) {
@@ -74,6 +76,26 @@ function Categoria() {
     );
   }
 
+  function isEditing() {
+    return values.id !== '';
+  }
+
+  function limparCampos() {
+    setValues({
+      id: '',
+      titulo: '',
+      descricao: '',
+      cor: '#000',
+    });
+  }
+
+  function atualizarCategoria() {
+    const categoriaAtualizada = JSON.parse(JSON.stringify(values));
+    setCategorias(
+      _.remove(categorias, (categoria) => categoria.id !== categoriaAtualizada.id),
+      categoriaAtualizada,
+    );
+  }
   return (
     <PageDefault>
       <div style={{
@@ -94,22 +116,31 @@ function Categoria() {
             label="Titulo da categoria"
             type="text"
             name="titulo"
+            value={values.titulo}
             onChange={handleChange}
           />
           <FormField
             label="Descrição da categoria"
             type="textarea"
             name="descricao"
+            value={values.descricao}
             onChange={handleChange}
           />
           <FormField
             label="Cor da categoria"
             type="color"
             name="cor"
+            value={values.cor}
             onChange={handleChange}
           />
-          <ButtonForm type="submit">
+          <ButtonForm type="submit" disabled={isEditing()}>
             Adicionar
+          </ButtonForm>
+          <ButtonForm onClick={atualizarCategoria} disabled={!isEditing()}>
+            Salvar
+          </ButtonForm>
+          <ButtonForm onClick={limparCampos}>
+            Limpar
           </ButtonForm>
         </Form>
         <div style={{
