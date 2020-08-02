@@ -90,7 +90,7 @@ function Categoria() {
   }
 
   function atualizarCategoria() {
-    const categoriaAtualizada = JSON.parse(JSON.stringify(values));
+    const categoriaAtualizada = values;
     setCategorias(
       _.remove(categorias, (categoria) => categoria.id !== categoriaAtualizada.id),
       categoriaAtualizada,
