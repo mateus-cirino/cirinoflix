@@ -38,13 +38,7 @@ TableContainer.TdCor = styled.td`
     padding: 5px;
 `;
 
-TableContainer.TdEditar = styled.td`
-    width: 10%;
-    border: 1px solid #a9899e;
-    padding: 5px;
-`;
-
-TableContainer.TdDeletar = styled.td`
+TableContainer.TdAcao = styled.td`
     width: 10%;
     border: 1px solid #a9899e;
     padding: 5px;

@@ -4,7 +4,7 @@ import TableContainer from './styles';
 import Edit from '../../assets/edit.png';
 import Delete from '../../assets/delete.png';
 
-function CategoryTable({ categorias }) {
+function CategoryTable({ categorias, edicao, exclusao }) {
   return (
     <TableContainer>
       <TableContainer.Table>
@@ -13,8 +13,8 @@ function CategoryTable({ categorias }) {
             <TableContainer.TdTitulo>Título</TableContainer.TdTitulo>
             <TableContainer.TdDescricao>Descrição</TableContainer.TdDescricao>
             <TableContainer.TdCor>Cor</TableContainer.TdCor>
-            <TableContainer.TdEditar>Editar</TableContainer.TdEditar>
-            <TableContainer.TdDeletar>Deletar</TableContainer.TdDeletar>
+            <TableContainer.TdAcao>Editar</TableContainer.TdAcao>
+            <TableContainer.TdAcao>Deletar</TableContainer.TdAcao>
           </tr>
         </TableContainer.Thead>
         <TableContainer.Tbody>
@@ -30,12 +30,24 @@ function CategoryTable({ categorias }) {
                         <TableContainer.TdCor>
                           {categoria.cor}
                         </TableContainer.TdCor>
-                        <TableContainer.TdEditar>
-                          <img src={Edit} alt="Icone para edição" />
-                        </TableContainer.TdEditar>
-                        <TableContainer.TdDeletar>
-                          <img src={Delete} alt="Icone para exclusão" />
-                        </TableContainer.TdDeletar>
+                        <TableContainer.TdAcao>
+                          <img
+                            src={Edit}
+                            alt="Icone para edição"
+                            onClick={() => {
+                              edicao(categoria);
+                            }}
+                          />
+                        </TableContainer.TdAcao>
+                        <TableContainer.TdAcao>
+                          <img
+                            src={Delete}
+                            alt="Icone para exclusão"
+                            onClick={() => {
+                              exclusao(categoria);
+                            }}
+                          />
+                        </TableContainer.TdAcao>
                       </tr>
                     ))
                 }
@@ -47,6 +59,8 @@ function CategoryTable({ categorias }) {
 
 CategoryTable.propTypes = {
   categorias: PropTypes.arrayOf(Object).isRequired,
+  edicao: PropTypes.func.isRequired,
+  exclusao: PropTypes.func.isRequired,
 };
 
 export default CategoryTable;
